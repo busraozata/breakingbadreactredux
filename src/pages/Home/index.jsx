@@ -33,7 +33,7 @@ export default function Home() {
             >
                 {characters.map((character) => (
                     <div key={character.char_id}>
-                        <Link to={`/character/${character.char_id}`}>
+                        <Link to={`/detail/${character.char_id}`}>
                             <img
                                 src={character.img}
                                 alt={character.name}
