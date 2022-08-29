@@ -24,10 +24,16 @@ export default function Home() {
     if (status === "failed") {
         return <Error message={error} />
     }
+    const breakpointColumnsObj = {
+        default: 4,
+        1100: 3,
+        700: 2,
+        500: 1
+    };
     return (
-        <div style={{ display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column" }}>
+        <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems: "center", flexDirection: "column" }}>
             <Masonry
-                breakpointCols={4}
+                breakpointCols={breakpointColumnsObj}
                 className="my-masonry-grid"
                 columnClassName="my-masonry-grid_column"
             >
