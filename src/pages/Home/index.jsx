@@ -21,13 +21,6 @@ export default function Home() {
         }
     }, [dispatch, status]);
 
-    const breakpointColumnsObj = {
-        default: 4,
-        1100: 3,
-        700: 2,
-        500: 1
-    };
-
     if (status === "failed") {
         return <Error message={error} />
     }
